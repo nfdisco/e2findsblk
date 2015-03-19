@@ -1,0 +1,31 @@
+e2findsblk
+==========
+
+Search for ext2, ext3 and ext4 filesystems in raw devices.
+
+This program scans a device and prints the offset of anything that resembles
+an ext2 filesystem.
+
+Its main purpose is to locate filesystems in situations when the device's
+partition table is corrupted or unreadable but the filesystem itself is
+still accessible.  In such sitations, the filesystem can be mounted by
+passing an offset option to mount(8).
+
+Usage
+-----
+
+Try `e2findsblk --help` for instructions.
+
+Installation
+------------
+
+    $ aclocal
+    $ automake -c --add-missing
+    $ autoconf
+    $ ./configure
+    $ make && make install
+
+Requirements
+------------
+
+Python 2.x
